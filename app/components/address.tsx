@@ -43,23 +43,23 @@ export default function Address() {
   return (
     <div className="">
       <Card className="w-[500px]">
-        <CardHeader>
-          <CardTitle>배송 정보</CardTitle>
-          {/* <CardDescription>Card Description</CardDescription> */}
-        </CardHeader>
-        <CardContent className="flex">
-          <div className="flex  justify-between w-[100%]">
-            <div className="">
-              <p>주문자 이름</p>
-              <p>010-9038-8541</p>
-              <p>서울특별시 은평구 248-74</p>
-              <p>59439</p>
+        <Form {...form}>
+          <CardHeader>
+            <CardTitle>배송 정보</CardTitle>
+            {/* <CardDescription>Card Description</CardDescription> */}
+          </CardHeader>
+          <CardContent className="flex">
+            <div className="flex  justify-between w-[100%]">
+              <div className="">
+                <p>주문자 이름</p>
+                <p>010-9038-8541</p>
+                <p>서울특별시 은평구 248-74</p>
+                <p>59439</p>
+              </div>
+              <Button>변경</Button>
             </div>
-            <button>변경</button>
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Form {...form}>
+          </CardContent>
+          <CardFooter>
             <form className="w-2/3 space-y-6">
               <FormField
                 control={form.control}
@@ -91,18 +91,14 @@ export default function Address() {
                         </SelectItem>
                       </SelectContent>
                     </Select>
-                    <FormDescription>
-                      You can manage email addresses in your{" "}
-                      <Link href="/examples/forms">email settings</Link>.
-                    </FormDescription>
+
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
             </form>
-          </Form>
-        </CardFooter>
+          </CardFooter>{" "}
+        </Form>
       </Card>
     </div>
   );
