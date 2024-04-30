@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -9,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,7 +23,6 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -46,7 +43,6 @@ export default function Address() {
         <Form {...form}>
           <CardHeader>
             <CardTitle>배송 정보</CardTitle>
-            {/* <CardDescription>Card Description</CardDescription> */}
           </CardHeader>
           <CardContent className="flex">
             <div className="flex  justify-between w-[100%]">
@@ -56,7 +52,7 @@ export default function Address() {
                 <p>서울특별시 은평구 248-74</p>
                 <p>59439</p>
               </div>
-              <Button>변경</Button>
+              <Button variant="outline">변경</Button>
             </div>
           </CardContent>
           <CardFooter>
